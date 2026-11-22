@@ -102,13 +102,14 @@ request, unless something is watching for it to be broken.
 
 ## Why this matters past the demo
 
-The providers named this week did not get caught by an audit of their
-privacy policy. They got caught because someone outside the policy
-treated "zero data retention" as a claim to test, not a setting to trust,
-and built a cheap, scalable way to test it: a tripwire in every request.
-That is a pattern any team routing prompts through a shared gateway or
-router can reuse at a much smaller scale than Dragos's 2 million prompts,
-the same way `clean-direct` vs `logs-anyway` vs `router-A` is reused here.
+The providers named this week were not caught by an internal audit of
+their own privacy policy. Dragos caught them by testing the "zero data
+retention" claim directly: seeding real requests with a unique marker and
+checking, independently, whether anything downstream touched it. Any team
+routing prompts through a shared gateway or router can run the same check
+at a much smaller scale than Dragos's 2 million prompts, the same way
+`clean-direct` vs `logs-anyway` vs `router-A` model the three outcomes
+here.
 
 ## License
 
