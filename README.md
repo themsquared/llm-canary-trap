@@ -1,5 +1,7 @@
 # llm-canary-trap
 
+> 📖 **Read the write-up:** [Zero Data Retention Is a Promise. Canary Tokens Are the Proof](https://webofmike.com/llm-zdr-canary-proof/)
+
 A stdlib-only, 60-second reproduction of the detection technique behind
 this week's biggest AI-supply-chain finding: catching an inference
 provider that ignores a Zero Data Retention (ZDR) flag, not by asking it
